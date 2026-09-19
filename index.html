@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#111827"><title>S Pen Notes</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css"></head>
+<body><header><div><strong>S Pen Notes</strong><input id="title" value="Nova anotação" aria-label="Título"></div><span id="status">Salvo</span></header>
+<nav class="toolbar">
+<button data-tool="pen" class="active">✒ Caneta</button><button data-tool="eraser">⌫ Borracha</button>
+<label>Cor <input id="color" type="color" value="#111827"></label><label>Espessura <input id="size" type="range" min="1" max="16" value="3"></label>
+<button id="undo">↶</button><button id="redo">↷</button><select id="paper"><option value="blank">Branco</option><option value="lined">Pautado</option><option value="grid">Quadriculado</option></select>
+<button id="newPage">+ Página</button><button id="prev">‹</button><span id="pageInfo">1/1</span><button id="next">›</button><button id="export">PNG</button><button id="deletePage">Excluir pág.</button>
+</nav><main><canvas id="canvas"></canvas></main><footer><span>S Pen: escreva • Dedo: navegação protegida durante a escrita</span></footer>
+<script src="app.js"></script></body></html>
