@@ -45,3 +45,5 @@
 /* v30 auth isolated from Firestore */
 
 /* v31: legacy service worker/cache removed to prevent stale auth screen */
+
+.auth-diag{margin-top:10px;font-size:12px;color:#667085;word-break:break-word}
