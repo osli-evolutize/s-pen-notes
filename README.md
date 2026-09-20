@@ -11,7 +11,7 @@ PWA de caderno manuscrito para tablets Samsung/S Pen, sem framework e sem backen
 - salvamento automático em IndexedDB
 - migração automática do documento da versão 1
 - backup completo em JSON e restauração
-- exportação da página para PNG
+- exportação da página para PNG\n- exportação do caderno inteiro para PDF (uma folha por página, gerado localmente e offline)
 - funcionamento offline via Service Worker
 - instalável como PWA
 
