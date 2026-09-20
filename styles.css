@@ -33,3 +33,5 @@
 
 /* v25 cloud diagnostics */
 .cloud-state{max-width:240px;overflow:hidden;text-overflow:ellipsis;cursor:help}
+
+/* v26 Firestore nested-page serialization */
