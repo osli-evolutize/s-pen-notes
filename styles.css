@@ -19,3 +19,6 @@
 
 /* v20 native share */
 #sharePage,#sharePdf{font-weight:600}
+
+/* v21 PDF import */
+#pdfImportBtn{font-weight:600}
