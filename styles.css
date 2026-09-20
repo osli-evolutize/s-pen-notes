@@ -43,3 +43,5 @@
 /* v29 standard Firestore initialization */
 
 /* v30 auth isolated from Firestore */
+
+/* v31: legacy service worker/cache removed to prevent stale auth screen */
