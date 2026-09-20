@@ -22,3 +22,6 @@
 
 /* v21 PDF import */
 #pdfImportBtn{font-weight:600}
+
+/* v22 Google authentication */
+.auth-gate{position:fixed;inset:0;z-index:9999;background:#e5e7eb;display:grid;place-items:center;padding:20px}.auth-card{width:min(420px,100%);background:white;border-radius:18px;padding:28px;box-shadow:0 12px 35px #0002;text-align:center}.auth-card>strong{font-size:24px}.auth-card h2{margin:20px 0 8px}.auth-card p{color:#6b7280}.google-login{width:100%;margin-top:14px;padding:12px;font-weight:650;background:white}.auth-card small{display:block;margin-top:12px;color:#6b7280}.user-badge{display:flex;align-items:center;gap:7px;font-size:12px}.user-badge img{width:28px;height:28px;border-radius:50%}
