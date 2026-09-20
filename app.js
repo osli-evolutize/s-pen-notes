@@ -17,7 +17,8 @@ function drawStroke(s){if(!s?.pts.length)return;ctx.strokeStyle=s.eraser?"white"
 function render(){if(!doc)return;bg();doc.pages[doc.page].forEach(drawStroke);if(current)drawStroke(current)}
 function point(e){let r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width,y:(e.clientY-r.top)/r.height,p:e.pressure||.5,t:Date.now()}}
 canvas.onpointerdown=e=>{if(e.pointerType==="touch")return;e.preventDefault();if(e.pointerType==="pen")penActive=true;drawing=true;canvas.setPointerCapture(e.pointerId);current={color:$("#color").value,size:+$("#size").value,eraser:tool==="eraser",pts:[point(e)]};redo=[]};
-canvas.onpointermove=e=>{if(!drawing||!current)return;e.preventDefault();(e.getCoalescedEvents?e.getCoalescedEvents():[e]).forEach(v=>current.pts.push(point(v)));render()};
+function penMove(e){if(!drawing||!current)return;e.preventDefault();let events=e.getCoalescedEvents?e.getCoalescedEvents():[e];events.forEach(v=>current.pts.push(point(v)));render()}
+if("onpointerrawupdate"in window)canvas.addEventListener("pointerrawupdate",penMove,{passive:false});else canvas.addEventListener("pointermove",penMove,{passive:false});
 function end(e){if(!drawing)return;drawing=false;if(current?.pts.length){doc.pages[doc.page].push(current);current=null;render();queueSave()}if(e?.pointerType==="pen")setTimeout(()=>penActive=false,300)}canvas.onpointerup=end;canvas.onpointercancel=end;
 document.querySelectorAll("[data-tool]").forEach(b=>b.onclick=()=>{tool=b.dataset.tool;document.querySelectorAll("[data-tool]").forEach(x=>x.classList.toggle("active",x===b))});
 $("#undo").onclick=()=>{let p=doc.pages[doc.page];if(p.length){redo.push(p.pop());render();queueSave()}};$("#redo").onclick=()=>{if(redo.length){doc.pages[doc.page].push(redo.pop());render();queueSave()}};
