@@ -10,3 +10,6 @@
 
 /* v17 lasso */
 .toolbar button[data-tool="lasso"].active{background:#2563eb;color:white;border-color:#2563eb}
+
+/* v18 selection actions */
+.selection-actions{display:flex;gap:5px}.selection-actions .danger{color:#b91c1c;border-color:#fecaca;background:#fff7f7}
