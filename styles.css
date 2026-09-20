@@ -30,3 +30,6 @@
 
 /* v24 Firestore sync */
 .cloud-state{font-size:12px;color:#bfdbfe;white-space:nowrap}
+
+/* v25 cloud diagnostics */
+.cloud-state{max-width:240px;overflow:hidden;text-overflow:ellipsis;cursor:help}
