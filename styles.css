@@ -47,3 +47,6 @@
 /* v31: legacy service worker/cache removed to prevent stale auth screen */
 
 .auth-diag{margin-top:10px;font-size:12px;color:#667085;word-break:break-word}
+
+/* v33: visible auth diagnostics and non-blocking cache cleanup */
+.auth-card #authDiag{display:block;margin-top:8px;font-size:12px;color:#667085}
