@@ -13,3 +13,6 @@
 
 /* v18 selection actions */
 .selection-actions{display:flex;gap:5px}.selection-actions .danger{color:#b91c1c;border-color:#fecaca;background:#fff7f7}
+
+/* v19 image background */
+#imageBtn{font-weight:600}#removeImage{color:#b91c1c}
